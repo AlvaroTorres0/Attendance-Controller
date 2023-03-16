@@ -1,0 +1,126 @@
+{
+  "A": [
+    {
+      "lunes": [
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 1,
+          "materia": "Principios fiscales",
+          "docente": "Del Rosario Reyes María Elena",
+          "carrera": "Contador público",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 2,
+          "materia": "Estudios de mercado",
+          "docente": "Hernández de Oca Antonio",
+          "carrera": "Ingeniería en gestión empresarial",
+          "grupo": 2
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 3,
+          "materia": "Mercadotecnia",
+          "docente": "Rojas Alzquezada Jesus Gerardo",
+          "carrera": "Ingeniería en gestión empresarial",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 4,
+          "materia": "Auditorías internas",
+          "docente": "Martinez Tadeo Angélica",
+          "carrera": "Contador público",
+          "grupo": 1
+        }
+      ]
+    }
+  ],
+  "E": [
+    {
+      "lunes": [
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 1,
+          "materia": "Programación orietada a objetos",
+          "docente": "Sánchez Santamaría Miriam",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 3,
+          "materia": "Servicios web en dispositivos móbiles",
+          "docente": "Urzúa Sánchez Guillermo",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 4,
+          "materia": "Taller de investigación",
+          "docente": "Ángeles Hernández Leonor",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 5,
+          "materia": "Taller de base de datos",
+          "docente": "Méndez Blanco Leticia",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 6,
+          "materia": "Administración de redes",
+          "docente": "Salvador Vargas Alejandro",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 8,
+          "materia": "Fundamentos de internet de las cosas",
+          "docente": "Sánchez Santamaría Juan Carlos",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 9,
+          "materia": "Tópicos avanzados de programacion",
+          "docente": "Gonzáles Lima Ilmers Michel",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 10,
+          "materia": "Química",
+          "docente": "Fuentes Ochoa Fernanda",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 11,
+          "materia": "Taller de ética",
+          "docente": "Tapia Espejel Vanessa",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 12,
+          "materia": "Cálculo integral",
+          "docente": "Sosa Martínez Israel",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3
+        }
+      ]
+    }
+  ]
+}

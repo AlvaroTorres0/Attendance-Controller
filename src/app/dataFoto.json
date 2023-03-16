@@ -1,0 +1,92 @@
+{
+  "E": [
+    {
+      "lunes": [
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 2,
+          "materia": "Programación orietada a objetos",
+          "docente": "Sánchez Santamaría Miriam",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E2(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 3,
+          "materia": "Servicios web en dispositivos móbiles",
+          "docente": "Urzúa Sánchez Guillermo",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E3(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 4,
+          "materia": "Taller de investigación",
+          "docente": "Ángeles Hernández Leonor",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E4(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 5,
+          "materia": "Taller de base de datos",
+          "docente": "Méndez Blanco Leticia",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E5(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 11:00",
+          "aula": 6,
+          "materia": "Administración de redes",
+          "docente": "Salvador Vargas Alejandro",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E6(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 8,
+          "materia": "Fundamentos de internet de las cosas",
+          "docente": "Sánchez Santamaría Juan Carlos",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 1,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E8(15-03-2023).jpg",
+            "hora": "10:08:00"
+          }
+        },
+        {
+          "horario": "10:00 - 12:00",
+          "aula": 12,
+          "materia": "Tópicos avanzados de programacion",
+          "docente": "Gonzáles Lima Ilmers Michel",
+          "carrera": "Ingeniería en sistemas",
+          "grupo": 3,
+          "fotografia": {
+            "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
+            "hora": "10:08:00"
+          }
+        }
+      ]
+    }
+  ]
+}

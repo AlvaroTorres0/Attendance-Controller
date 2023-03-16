@@ -1,0 +1,86 @@
+*{
+    font-family: monospace;
+}
+
+.principal-container{
+    height: 100vh;
+    background: #252525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card{
+    width: 450px;
+    height: 350px;
+    background: rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 10px;   
+}
+.card-image{
+    position: relative;
+    height: 80%;
+    width: 100%; 
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card-image_status{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.card-image_status img{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+}
+.status-block{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-info{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card-info_data{
+    height: 100%;
+}
+.card-info_classroom{
+    margin-left: 10px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+.card-info_classroom h3{
+    font-size: x-large;
+}
+.card-info_teacher{
+    margin-left: 10px;
+    height: 50%;
+}
+.card-info_teacher span{
+    font-size: large;
+}
+
+.container_classrooms{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 80vh;
+    align-items: center;
+    gap: 30px;  
+}

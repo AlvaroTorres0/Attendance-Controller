@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-size: x-large;
+    color: #fff;
+}
+
+.principal-container{
+    height: 100vh;
+    background: url(../../../assets/login-hero2.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login{
+    width: 500px;
+    height: 60%;
+    background: #242424;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*? Container de la foto */
+.container-login_logo-tec{
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-login_logo-tec > img{
+    height: 80px;
+}
+
+/*? Estilos title */
+.title{
+    font-size: xx-large;
+    position: relative;
+}
+.title::after{
+    content: '';
+    height: 1px;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 10;
+    margin: auto;
+}
+
+/*? Container de los input */
+.container-login_data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    gap: 40px;
+}
+.container-login_items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container-login_items:first-child{
+    margin-top: 40px;
+}
+
+.container-login_items > input{
+    padding: 10px;
+    width: 60%;
+    background: #444444;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 2px solid #07f;
+}
+.container-login_items > input:focus{
+    outline: none;
+    border-bottom: 2px solid #0f0;
+    background: #555555;
+}
+.login{
+    height: 40px;
+    width: 40%;
+    background: #005585;
+    border: none;
+    border-radius: 15px;
+}
+.login:hover{
+    background: #000099;
+}
