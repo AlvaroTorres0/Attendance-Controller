@@ -2,155 +2,22 @@
     <div class="container_bar">
     </div>
 
-    <div class="container_classrooms">
-        <div class="card">
+    <div class="container_classrooms" >
+        <div class="card" *ngFor="let item of dataFinal">
             <div class="card-image">
                 <div class="card-image_status">
                     <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
+                        <img src="../../../assets//iconsStatus/accept.png" id="status" class="{{item.analisis.coincidencia}}" alt="">
                     </div>
                 </div>
-                <img src="../../../assets//clases.jpg" alt="">
+                <img src={{item.fotografia.url}} alt="">
             </div>
             <div class="card-info">
                 <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
+                    <h3 class="">{{item.edificio+item.aula}}</h3>
                 </div>
                 <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/close.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/warning.png" style="height: 65px; width: 65px;" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-image">
-                <div class="card-image_status">
-                    <div class="status-block">
-                        <img src="../../../assets//iconsStatus/accept.png" class="status" alt="">
-                    </div>
-                </div>
-                <img src="../../../assets//clases.jpg" alt="">
-            </div>
-            <div class="card-info">
-                <div class="card-info_classroom">
-                    <h3 class="">E1</h3>
-                </div>
-                <div class="card-info_teacher">
-                    <span class="">Medina Castro Karen Itxell</span>
+                    <span class="">{{item.docente}}</span>
                 </div>
             </div>
         </div>
