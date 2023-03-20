@@ -14,9 +14,12 @@ export class HomeComponent {
   public dataFinal : any = [];
   public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
   public edificio = 0;
+  public imgAsistencia = "../../../assets//iconsStatus/accept.png";
+  public imgFalta = "../../../assets//iconsStatus/close.png";
+  public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
   ngOnInit(): void { 
-    this.crearDataAzure()
+    this.crearDataAzure();
   }
 
   crearDataAzure(){
@@ -31,14 +34,21 @@ export class HomeComponent {
 
       // Es para esperar a la data de Azure y que la data final no se arme antes.
       setTimeout(() => {
-        this.armarObjetos(index,prediccion);
+        // Validamos el porcentaje de coincidencia
+        if (prediccion[1] > 0.9800000) {
+          this.armarObjetos(index,prediccion,"Asistencia",this.imgAsistencia);                    
+        }else if (prediccion[1] > 0.5000000 && prediccion < 0.9799999) {
+          this.armarObjetos(index,prediccion,"Revisar",this.imgRevisar);
+        }else{
+          this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
+        }
       }, 3000);
     }
     console.log(this.dataFinal);
   }
 
   // Crea objetos que se agregan a la data final
-  armarObjetos(index : any, prediccion : any){
+  armarObjetos(index : any, prediccion : any, asistencia : string, img : string){
     let nuevaData = {}
     nuevaData = {
       horario: this.dataFotosSeteada[this.edificio][index].horario,
@@ -52,7 +62,9 @@ export class HomeComponent {
       },
       analisis: {
         id: prediccion[0],
-        coincidencia: prediccion[1]
+        coincidencia: String(prediccion[1]),
+        asistencia: asistencia,
+        imgStatus: img
       }     
     }
     this.dataFinal.push(nuevaData)
@@ -67,7 +79,7 @@ export class HomeComponent {
       this.dataAzure = Object.values(resp);
       // La asignamos a un arreglo
       dataPrediccion.push(this.dataAzure[0])
-      dataPrediccion.push(String(this.dataAzure[4][0].probability))
+      dataPrediccion.push(this.dataAzure[4][0].probability)
     });
     return dataPrediccion;     
   }
@@ -79,4 +91,5 @@ export class HomeComponent {
       this.edificio-=1;
     }  
   }
+  
 }
