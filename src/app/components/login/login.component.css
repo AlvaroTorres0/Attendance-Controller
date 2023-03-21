@@ -94,10 +94,16 @@
     background: #005585;
     border: none;
     border-radius: 15px;
+    transition: 1s all;
 }
-.login:hover{
-    background: #000099;
+.login:hover {
+    background: #33CC88;
 }
+.login:hover > a{
+    color: #444444;
+}
+
 .login a{
     text-decoration: none;
+    transition: 1s all;
 }

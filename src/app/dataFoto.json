@@ -14,16 +14,17 @@
     },
     {
       "horario": "10:00 - 12:00",
-      "aula": 3,
-      "materia": "Servicios web en dispositivos móbiles",
-      "docente": "Urzúa Sánchez Guillermo",
+      "aula": 12,
+      "materia": "Tópicos avanzados de programacion",
+      "docente": "Gonzáles Lima Ilmers Michel",
       "carrera": "Ingeniería en sistemas",
       "grupo": 3,
       "fotografia": {
-        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E3(15-03-2023).jpg",
+        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
         "hora": "10:08:00"
       }
     }
+  
   ],
   "F": [
     {

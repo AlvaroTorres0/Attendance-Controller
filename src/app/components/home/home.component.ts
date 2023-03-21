@@ -12,27 +12,33 @@ export class HomeComponent {
   public dataFotosSeteada : any = [];
   public dataAzure : any = [];
   public dataFinal : any = [];
+  public dataElementoEditar : any = {};
   public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
   public edificio = 0;
+  public statusContainerClassrooms = true;
+  public statusContainerEdicion = false;
   public imgAsistencia = "../../../assets//iconsStatus/accept.png";
   public imgFalta = "../../../assets//iconsStatus/close.png";
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
   ngOnInit(): void { 
     this.crearDataAzure();
+    setTimeout(()=>{
+      this.agregarEventoModificar();
+    },5000)
   }
 
   crearDataAzure(){
-    // Seteamos la data de nuestro archivo para poder trabajar con ella
+    //* Seteamos la data de nuestro archivo para poder trabajar con ella
     this.dataFotosSeteada = Object.values(dataFotos);
     let longitud = this.dataFotosSeteada[this.edificio].length;
     
-    // Enviamos la URL de la fotografía al método que envía al servicio
+    //* Enviamos la URL de la fotografía al método que envía al servicio
     for (let index = 0; index < longitud; index++) {
-      // Contiene la información devuelta de Azure
+      //* Contiene la información devuelta de Azure
       let prediccion = this.analizarImagen(this.dataFotosSeteada[this.edificio][index].fotografia.url);
 
-      // Es para esperar a la data de Azure y que la data final no se arme antes.
+      //* Es para esperar a la data de Azure y que la data final no se arme antes.
       setTimeout(() => {
         // Validamos el porcentaje de coincidencia
         if (prediccion[1] > 0.9800000) {
@@ -45,9 +51,10 @@ export class HomeComponent {
       }, 3000);
     }
     console.log(this.dataFinal);
+    
   }
 
-  // Crea objetos que se agregan a la data final
+  //* Crea objetos que se agregan a la data final
   armarObjetos(index : any, prediccion : any, asistencia : string, img : string){
     let nuevaData = {}
     nuevaData = {
@@ -70,19 +77,38 @@ export class HomeComponent {
     this.dataFinal.push(nuevaData)
   }
 
-  // Analiza las imágenes con la URL
+  //* Analiza las imágenes con la URL
   analizarImagen(url : String){
     let dataPrediccion : any = []
-    // Llamamos el método del servicio
+    //* Llamamos el método del servicio
     this._msService.evaluarImagen(url).subscribe(resp=>{
-      // Seteamos la respuesta
+      //* Seteamos la respuesta
       this.dataAzure = Object.values(resp);
-      // La asignamos a un arreglo
+      //* La asignamos a un arreglo
       dataPrediccion.push(this.dataAzure[0])
       dataPrediccion.push(this.dataAzure[4][0].probability)
     });
     return dataPrediccion;     
   }
+
+  //* Recibe el id y toma la dataFinal de esa posición y se crea una data nueva
+  editarElemento(id : any){
+    this.dataElementoEditar = this.dataFinal[id];
+    this.statusContainerClassrooms = false;
+    this.statusContainerEdicion = true;
+  }
+
+  //* Agrega un listener a los elementos que tienen la clase falta (cambiar a revisar después) y manda el id a editar elemento
+  agregarEventoModificar = () =>{
+    let itemsModificar = document.querySelectorAll(".Falta");
+    for (let index = 0; index < itemsModificar.length; index++) { 
+      itemsModificar[index].addEventListener("click", e =>{
+        let id = itemsModificar[index].getAttribute("id");
+        this.editarElemento(id);
+      });   
+    }
+  }
+
 
   cambiarEdificio = (direccion : Boolean) =>{
     if (direccion) {
