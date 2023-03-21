@@ -22,38 +22,6 @@
 
 
     <div class="containerEdicion" *ngIf="statusContainerEdicion">
-        <div class="materia_info">
-            <div class="icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/7204/7204859.png"> 
-            </div>
-
-          <div class="info">
-            <h1 class="info h1">{{dataElementoEditar.horario}} {{dataElementoEditar.materia}}</h1>
-            <p class="info p">{{dataElementoEditar.docente}}</p>
-          </div>
-        </div>
-
-        <div class="photo_class">
-            <img src="{{dataElementoEditar.fotografia.url}}">
-            <div class="acercar">
-                <img src="../../../assets//acercar.png" alt="">
-            </div>
-        </div>
-
-        <div class="class_info">
-           <div class="classroom">
-                <div class="icon">
-                    <img src="https://cdn-icons-png.flaticon.com/512/7204/7204859.png"> 
-                </div>
-
-                <div class="info">
-                    <h2>Edificio {{dataElementoEditar.edificio}} - Aula {{dataElementoEditar.aula}}</h2>
-                </div>
-            </div>
-            
-            <div class="buttons">
-                <button class="button button1">Asistencia</button>
-                <button class="button button2">Falta</button>
-            </div>
-        </div>
+        <app-revisar></app-revisar>
+    </div>
 </div>

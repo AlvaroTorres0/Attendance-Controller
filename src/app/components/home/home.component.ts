@@ -12,7 +12,7 @@ export class HomeComponent {
   public dataFotosSeteada : any = [];
   public dataAzure : any = [];
   public dataFinal : any = [];
-  public dataElementoEditar : any = {};
+  public elementoEditar = 0;
   public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
   public edificio = 0;
   public statusContainerClassrooms = true;
@@ -91,9 +91,9 @@ export class HomeComponent {
     return dataPrediccion;     
   }
 
-  //* Recibe el id y toma la dataFinal de esa posición y se crea una data nueva
+  //* Recibe el id y se le asigna a elemento a editar para tomarla desde el componente revisar
   editarElemento(id : any){
-    this.dataElementoEditar = this.dataFinal[id];
+    this.elementoEditar = id;
     this.statusContainerClassrooms = false;
     this.statusContainerEdicion = true;
   }
