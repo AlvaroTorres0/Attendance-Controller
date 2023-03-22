@@ -15,6 +15,7 @@ export class HomeComponent {
   public elementoEditar = 0;
   public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
   public edificio = 0;
+  public dataString = "";
   public statusContainerClassrooms = true;
   public statusContainerEdicion = false;
   public imgAsistencia = "../../../assets//iconsStatus/accept.png";
@@ -25,7 +26,7 @@ export class HomeComponent {
     this.crearDataAzure();
     setTimeout(()=>{
       this.agregarEventoModificar();
-    },5000)
+    },12000)
   }
 
   crearDataAzure(){
@@ -48,11 +49,42 @@ export class HomeComponent {
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 3000);
+      }, 8000);
     }
-    console.log(this.dataFinal);
-    
+    console.log(this.dataFinal);    
   }
+
+  convertirDataFinalAString(){
+    this.dataString = "";
+    let iteracion = 0;
+    let inicio = '{ "21/03/2023": [';
+    let final = "] }";
+
+    for (const iterator of this.dataFinal) {
+      iteracion ++;
+      // Convertimos cada objetos de la dataFinal a string y lo concatenamos a la data String
+      this.dataString += JSON.stringify(iterator);
+      if (iteracion != this.dataFinal.length) {
+        this.dataString+=",";        
+      }
+    }
+    let dataStringFinal = inicio+this.dataString+final;
+    return dataStringFinal;
+  }
+
+  crearArchivoJSON = () =>{
+    let dataString = this.convertirDataFinalAString();
+    const blob = new Blob([dataString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
 
   //* Crea objetos que se agregan a la data final
   armarObjetos(index : any, prediccion : any, asistencia : string, img : string){
@@ -100,6 +132,8 @@ export class HomeComponent {
 
   //* Agrega un listener a los elementos que tienen la clase falta (cambiar a revisar después) y manda el id a editar elemento
   agregarEventoModificar = () =>{
+    //! Creamos el archivo JSON con la data Final
+    this.crearArchivoJSON();
     let itemsModificar = document.querySelectorAll(".Falta");
     for (let index = 0; index < itemsModificar.length; index++) { 
       itemsModificar[index].addEventListener("click", e =>{
