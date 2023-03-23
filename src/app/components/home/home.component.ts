@@ -16,17 +16,17 @@ export class HomeComponent {
   public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
   public edificio = 0;
   public dataString = "";
-  public statusContainerClassrooms = true;
   public statusContainerEdicion = false;
+  public statusContainerPrincipal = true;
   public imgAsistencia = "../../../assets//iconsStatus/accept.png";
   public imgFalta = "../../../assets//iconsStatus/close.png";
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
   ngOnInit(): void { 
-    this.crearDataAzure();
-    setTimeout(()=>{
-      this.agregarEventoModificar();
-    },12000)
+    // this.crearDataAzure();
+    // setTimeout(()=>{
+    //   this.agregarEventoModificar();
+    // },5000)
   }
 
   crearDataAzure(){
@@ -49,7 +49,7 @@ export class HomeComponent {
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 8000);
+      }, 3000);
     }
     console.log(this.dataFinal);    
   }
@@ -126,14 +126,15 @@ export class HomeComponent {
   //* Recibe el id y se le asigna a elemento a editar para tomarla desde el componente revisar
   editarElemento(id : any){
     this.elementoEditar = id;
-    this.statusContainerClassrooms = false;
+    this.statusContainerPrincipal = false;
     this.statusContainerEdicion = true;
+
   }
 
   //* Agrega un listener a los elementos que tienen la clase falta (cambiar a revisar después) y manda el id a editar elemento
   agregarEventoModificar = () =>{
     //! Creamos el archivo JSON con la data Final
-    this.crearArchivoJSON();
+    //!  this.crearArchivoJSON();
     let itemsModificar = document.querySelectorAll(".Falta");
     for (let index = 0; index < itemsModificar.length; index++) { 
       itemsModificar[index].addEventListener("click", e =>{

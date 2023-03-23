@@ -7,13 +7,17 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RevisarComponent } from './components/revisar/revisar.component';
+import { FotoPcompletaComponent } from './components/foto-pcompleta/foto-pcompleta.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RevisarComponent
+    RevisarComponent,
+    FotoPcompletaComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<div class="container-pCompleta" *ngIf="statusPantalla">
+    <div class="photo_class">
+        <img src="{{foto}}">
+        <div class="alejar" (click)="regresarRevision()">
+            <img src="../../../assets/minimizar.png" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="containerRevision" *ngIf="statusRevision">
+    <app-revisar></app-revisar>
+</div>

@@ -1,0 +1,41 @@
+/*! Estilos efra */
+.container-pCompleta{
+    height:100vh;
+    width: 100vw;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:10px;
+  }
+  .photo_class{
+    background-color:#d3d3d3;
+    display:flex;
+    width:70%;
+    height:80vh;
+    justify-content:flex-end;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .photo_class > img{
+    height: 100%;
+    width: 100%;
+  }
+  
+.alejar{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 10px;
+}
+.alejar img{
+  height: 100%;
+}
+
+.containerRevision{
+  height: 100vh;
+}

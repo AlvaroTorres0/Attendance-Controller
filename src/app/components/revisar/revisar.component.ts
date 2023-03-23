@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
+import { FotoPcompletaComponent } from '../foto-pcompleta/foto-pcompleta.component';
 
 @Component({
   selector: 'app-revisar',
@@ -10,6 +11,8 @@ export class RevisarComponent {
   //* Se toma el elemento al que se le dio clic
   public modificar = this._home.elementoEditar;
   public dataElementoEditar : any = {};
+  public statusFotoPcompleta = false;
+  public statusPrincipal = true;
 
   constructor(private _home : HomeComponent){}
 
@@ -18,4 +21,8 @@ export class RevisarComponent {
     this.dataElementoEditar = this._home.dataFinal[this.modificar];
   }
 
+  mostrarEnPantallaCompleta = () =>{
+    this.statusPrincipal = false;
+    this.statusFotoPcompleta = true;
+  }
 }
