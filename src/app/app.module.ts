@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RevisarComponent } from './components/revisar/revisar.component';
 import { FotoPcompletaComponent } from './components/foto-pcompleta/foto-pcompleta.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SeleccionEdificioComponent } from './components/seleccion-edificio/seleccion-edificio.component';
+import { BarraBusquedaComponent } from './components/barra-busqueda/barra-busqueda.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     RevisarComponent,
     FotoPcompletaComponent,
-    NavbarComponent
+    NavbarComponent,
+    SeleccionEdificioComponent,
+    BarraBusquedaComponent
   ],
   imports: [
     BrowserModule,

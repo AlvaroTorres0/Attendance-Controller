@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
-import { FotoPcompletaComponent } from '../foto-pcompleta/foto-pcompleta.component';
 
 @Component({
   selector: 'app-revisar',
@@ -24,5 +23,10 @@ export class RevisarComponent {
   mostrarEnPantallaCompleta = () =>{
     this.statusPrincipal = false;
     this.statusFotoPcompleta = true;
+  }
+
+  confirmarAsistencia = () =>{
+    this.statusPrincipal = false;
+    this._home.statusContainerPrincipal = true;
   }
 }

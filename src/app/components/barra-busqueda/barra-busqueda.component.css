@@ -1,0 +1,22 @@
+.containerBusqueda{
+    width: 330px;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.icon{
+    height: 40px;
+    width: 40px;
+}
+
+.container-icon:hover > img{
+    height: 45px;
+    width: 45px;
+}
+.container-icon img{
+    transition: .2s all;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import dataFotos from '../../dataFoto.json';
 import { MscvServiceService } from '../../servicio/mscv-service.service';
 
@@ -8,13 +9,13 @@ import { MscvServiceService } from '../../servicio/mscv-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private _msService : MscvServiceService){}
+  constructor(private _msService : MscvServiceService, private route: ActivatedRoute){}
   public dataFotosSeteada : any = [];
   public dataAzure : any = [];
   public dataFinal : any = [];
   public elementoEditar = 0;
-  public edificios = ["A","B","C","D","E","F","G","H","I","J","K"];
-  public edificio = 0;
+  public edificios = ["A","E","F","G","H","I","J","K"];
+  public edificio = Number(this.route.snapshot.paramMap.get('edificio'));
   public dataString = "";
   public statusContainerEdicion = false;
   public statusContainerPrincipal = true;
@@ -22,11 +23,19 @@ export class HomeComponent {
   public imgFalta = "../../../assets//iconsStatus/close.png";
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
-  ngOnInit(): void { 
-    // this.crearDataAzure();
-    // setTimeout(()=>{
-    //   this.agregarEventoModificar();
-    // },5000)
+  ngOnInit(): void {
+    this.metodoPrincipal();
+    
+  }
+  metodoPrincipal = () =>{
+    this.dataFotosSeteada = [];
+    this. dataAzure = [];
+    this. dataFinal = [];
+    this.crearDataAzure();
+    setTimeout(()=>{
+      this.agregarEventoModificar();
+    },12000)
+
   }
 
   crearDataAzure(){
@@ -49,7 +58,7 @@ export class HomeComponent {
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 3000);
+      }, 9000);
     }
     console.log(this.dataFinal);    
   }

@@ -1,0 +1,24 @@
+<div class="containerEdificios">
+    <div class="navbar">
+        <app-navbar></app-navbar>
+    </div>
+    <div class="title">
+        <h1>Edificios</h1>
+    </div>
+
+    <div class="edificios">
+        <div class="edificio" *ngFor="let item of edificios" id="{{item.posicion}}">
+            <div class="redireccion">
+                <a href="./home/{{item.posicion}}"></a>
+            </div>
+
+            <div class="edificioimg">
+                <img src="{{item.img}}" alt="">
+            </div>
+
+            <div class="nombreEdificio">
+                <h3>Edificio {{item.edificio}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
