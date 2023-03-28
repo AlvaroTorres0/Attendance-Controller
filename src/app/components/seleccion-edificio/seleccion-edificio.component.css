@@ -36,8 +36,8 @@
     height: 300px;
     width: 380px;
     border-radius: 10px;
-    background: rgb(88,166,249);
-    background: linear-gradient(90deg, rgba(88,166,249,1) 0%, rgba(71,72,243,1) 100%);
+    background: rgb(34,38,129);
+    background: linear-gradient(90deg, rgba(34,38,129,1) 0%, rgba(57,71,224,1) 100%);
     box-shadow:
     3.4px 3.4px 4.5px rgba(0, 0, 0, 0.1),
     8.7px 8.7px 9.6px rgba(0, 0, 0, 0.069),
@@ -59,8 +59,10 @@
     transform: scale(1.1);
     /* background: rgb(219,52,221);
     background: linear-gradient(90deg, rgba(219,52,221,1) 0%, rgba(151,55,244,1) 100%); */
-    background: rgb(220,47,229);
-    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%);
+    /* background: rgb(220,47,229);
+    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%); */
+    background: rgb(23,146,153);
+background: linear-gradient(90deg, rgba(23,146,153,1) 0%, rgba(23,197,201,1) 100%);
     
 }
 
@@ -72,6 +74,7 @@
     height: 100%;
     width: 100%;
     border-radius: 10px;
+    object-fit: fill;
 }
 
 .nombreEdificio{

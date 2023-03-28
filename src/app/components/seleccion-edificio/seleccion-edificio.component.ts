@@ -9,42 +9,42 @@ export class SeleccionEdificioComponent {
   public edificios = [
     {
       edificio: "A",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/A.jpg',
       posicion: "0"
     },
     {
       edificio: "E",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/E.jpg',
       posicion: "1"
     },
     {
       edificio: "F",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/F.jpg',
       posicion: "2"
     },
     {
       edificio: "G",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/G.jpg',
       posicion: "3"
     },
     {
       edificio: "H",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/H.jpg',
       posicion: "4"
     },
     {
       edificio: "I",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/I.jpg',
       posicion: "5"
     },
     {
       edificio: "J",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/J.jpg',
       posicion: "6"
     },
     {
       edificio: "K",
-      img: '../../../assets/login-hero3.JPG',
+      img: '../../../assets/edificios/K.jpg',
       posicion: "7"
     }
   ]
