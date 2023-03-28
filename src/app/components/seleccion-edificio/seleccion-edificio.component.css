@@ -59,10 +59,8 @@
     transform: scale(1.1);
     /* background: rgb(219,52,221);
     background: linear-gradient(90deg, rgba(219,52,221,1) 0%, rgba(151,55,244,1) 100%); */
-    /* background: rgb(220,47,229);
-    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%); */
-    background: rgb(23,146,153);
-background: linear-gradient(90deg, rgba(23,146,153,1) 0%, rgba(23,197,201,1) 100%);
+    background: rgb(220,47,229);
+    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%);
     
 }
 
