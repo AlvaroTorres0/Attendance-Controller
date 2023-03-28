@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import dataFotos from '../../dataFoto.json';
 import { MscvServiceService } from '../../servicio/mscv-service.service';
@@ -9,7 +9,7 @@ import { MscvServiceService } from '../../servicio/mscv-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private _msService : MscvServiceService, private route: ActivatedRoute){}
+  constructor(private _msService : MscvServiceService, private route: ActivatedRoute, private renderer: Renderer2){}
   public dataFotosSeteada : any = [];
   public dataAzure : any = [];
   public dataFinal : any = [];
@@ -24,7 +24,7 @@ export class HomeComponent {
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
   ngOnInit(): void {
-    this.metodoPrincipal();
+    //this.metodoPrincipal();
     
   }
   metodoPrincipal = () =>{
@@ -34,7 +34,7 @@ export class HomeComponent {
     this.crearDataAzure();
     setTimeout(()=>{
       this.agregarEventoModificar();
-    },12000)
+    },15000)
 
   }
 
@@ -58,7 +58,7 @@ export class HomeComponent {
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 9000);
+      }, 15000);
     }
     console.log(this.dataFinal);    
   }
@@ -146,6 +146,8 @@ export class HomeComponent {
     //!  this.crearArchivoJSON();
     let itemsModificar = document.querySelectorAll(".Falta");
     for (let index = 0; index < itemsModificar.length; index++) { 
+      this.renderer.setStyle(itemsModificar[index], 'background', 'rgb(237,111,111) linear-gradient(90deg, rgba(237,111,111,1) 0%, rgba(224,57,57,1) 100%)');
+
       itemsModificar[index].addEventListener("click", e =>{
         let id = itemsModificar[index].getAttribute("id");
         this.editarElemento(id);

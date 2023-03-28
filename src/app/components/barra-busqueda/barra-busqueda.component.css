@@ -13,10 +13,10 @@
     width: 40px;
 }
 
-.container-icon:hover > img{
+.container-icon:hover > a > img{
     height: 45px;
     width: 45px;
 }
-.container-icon img{
+.container-icon a > img{
     transition: .2s all;
 }

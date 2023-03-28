@@ -21,7 +21,6 @@
     display: block;
     height: 100%;
     width: 100%;
-    border: 1px solid red;
 }
 
 .edificios{
@@ -37,10 +36,32 @@
     height: 300px;
     width: 380px;
     border-radius: 10px;
-    background: #000;
-    -webkit-box-shadow: 10px 10px 16px -11px rgba(70,70,70,0.75);
-    -moz-box-shadow: 10px 10px 16px -11px rgba(70,70,70,0.75);
-    box-shadow: 10px 10px 16px -11px rgba(70,70,70,0.75);
+    background: rgb(88,166,249);
+    background: linear-gradient(90deg, rgba(88,166,249,1) 0%, rgba(71,72,243,1) 100%);
+    box-shadow:
+    3.4px 3.4px 4.5px rgba(0, 0, 0, 0.1),
+    8.7px 8.7px 9.6px rgba(0, 0, 0, 0.069),
+    17.7px 17.7px 16.6px rgba(0, 0, 0, 0.056),
+    36.5px 36.5px 29.8px rgba(0, 0, 0, 0.044),
+    100px 100px 80px rgba(0, 0, 0, 0.031);
+    transition: transform 0.5s;
+}
+
+.edificio:hover{
+    box-shadow:
+    0px 2.3px 1.9px rgba(0, 0, 0, 0.015),
+    0px 5.4px 4.3px rgba(0, 0, 0, 0.022),
+    0px 9.7px 7.7px rgba(0, 0, 0, 0.028),
+    0px 16.1px 12.8px rgba(0, 0, 0, 0.032),
+    0px 26.5px 21.2px rgba(0, 0, 0, 0.038),
+    0px 46.2px 37px rgba(0, 0, 0, 0.045),
+    0px 100px 80px rgba(0, 0, 0, 0.06);
+    transform: scale(1.1);
+    /* background: rgb(219,52,221);
+    background: linear-gradient(90deg, rgba(219,52,221,1) 0%, rgba(151,55,244,1) 100%); */
+    background: rgb(220,47,229);
+    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%);
+    
 }
 
 .edificioimg{

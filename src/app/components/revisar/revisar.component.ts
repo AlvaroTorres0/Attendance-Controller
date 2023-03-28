@@ -12,6 +12,7 @@ export class RevisarComponent {
   public dataElementoEditar : any = {};
   public statusFotoPcompleta = false;
   public statusPrincipal = true;
+  public edificio = this._home.edificio;
 
   constructor(private _home : HomeComponent){}
 
@@ -23,10 +24,5 @@ export class RevisarComponent {
   mostrarEnPantallaCompleta = () =>{
     this.statusPrincipal = false;
     this.statusFotoPcompleta = true;
-  }
-
-  confirmarAsistencia = () =>{
-    this.statusPrincipal = false;
-    this._home.statusContainerPrincipal = true;
   }
 }
