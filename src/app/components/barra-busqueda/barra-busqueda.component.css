@@ -14,8 +14,7 @@
 }
 
 .container-icon:hover > a > img{
-    height: 45px;
-    width: 45px;
+    transform: scale(1.1);
 }
 .container-icon a > img{
     transition: .2s all;

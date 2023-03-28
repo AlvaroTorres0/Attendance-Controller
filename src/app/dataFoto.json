@@ -1,5 +1,29 @@
 {
   "A": [
+    {
+      "horario": "10:00 - 11:00",
+      "aula": 2,
+      "materia": "Taller de investigación",
+      "docente": "Ángeles Hernández Leonor",
+      "carrera": "Ingeniería en sistemas",
+      "grupo": 1,
+      "fotografia": {
+        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E2(15-03-2023).jpg",
+        "hora": "10:08:00"
+      }
+    },
+    {
+      "horario": "10:00 - 11:00",
+      "aula": 4,
+      "materia": "Programación orientada a objetos",
+      "docente": "Hernández Cásbis Ruth",
+      "carrera": "Ingeniería en sistemas",
+      "grupo": 1,
+      "fotografia": {
+        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E4(15-03-2023).jpg",
+        "hora": "10:08:00"
+      }
+    }
 
   ],
   "E": [

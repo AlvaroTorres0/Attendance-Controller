@@ -40,3 +40,12 @@
    .profile img{
     height: 60%;
   }
+
+  @media only screen and (max-width: 650px){
+    .project-name h2{
+      font-size: 20px;
+    }
+    .clock{
+      display: none;
+    }
+  }

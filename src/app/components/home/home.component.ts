@@ -24,7 +24,7 @@ export class HomeComponent {
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
   ngOnInit(): void {
-    //this.metodoPrincipal();
+    this.metodoPrincipal();
     
   }
   metodoPrincipal = () =>{

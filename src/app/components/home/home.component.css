@@ -3,7 +3,7 @@
 }
 
 .principal-container{
-    height: 100vh;
+    height: auto;
     background: #252525;
     display: flex;
     flex-direction: column;
@@ -86,14 +86,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    height: 80vh;
+    height: auto;
     align-items: center;
     gap: 30px;  
 }
 
 .container-edificio{
     height: 6vh;
-    width: 20%;
+    width: 300px;
     display: flex;
     color: #fff;
     background: #181b24;
@@ -125,7 +125,6 @@
 }
 
 .containerBusqueda{
-    height: 5vh;
     margin-bottom: 10px;
     width: 100vw;
     display: flex;
