@@ -133,6 +133,9 @@
   .container-nav{
     height: 6vh;
 }
+.button a{
+  text-decoration: none;
+}
 
 .fotoPantallaCompleta{
   height: 100vh;
