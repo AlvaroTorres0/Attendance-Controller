@@ -13,14 +13,14 @@
       }
     },
     {
-      "horario": "10:00 - 11:00",
-      "aula": 4,
-      "materia": "Programación orientada a objetos",
-      "docente": "Hernández Cásbis Ruth",
+      "horario": "10:00 - 12:00",
+      "aula": 12,
+      "materia": "Tópicos avanzados de programacion",
+      "docente": "Gonzáles Lima Ilmers Michel",
       "carrera": "Ingeniería en sistemas",
-      "grupo": 1,
+      "grupo": 3,
       "fotografia": {
-        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E4(15-03-2023).jpg",
+        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
         "hora": "10:08:00"
       }
     }
@@ -98,7 +98,7 @@
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
         "hora": "10:08:00"
       }
-    } 
+    }
   ],
   "F": [
 
@@ -107,13 +107,13 @@
 
   ],
   "H": [
-    
+
   ],
   "I": [
-    
+
   ],
   "J": [
-    
+
   ],
   "K": [
     {
@@ -187,6 +187,6 @@
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973116/attendance%20controller/IMG_20230324_083718_pgq5m5.jpg",
         "hora": "10:10:00"
       }
-    }     
+    }
   ]
 }

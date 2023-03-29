@@ -25,7 +25,7 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.metodoPrincipal();
-    
+
   }
   metodoPrincipal = () =>{
     this.dataFotosSeteada = [];
@@ -34,7 +34,7 @@ export class HomeComponent {
     this.crearDataAzure();
     setTimeout(()=>{
       this.agregarEventoModificar();
-    },15000)
+    },5000)
 
   }
 
@@ -42,7 +42,7 @@ export class HomeComponent {
     //* Seteamos la data de nuestro archivo para poder trabajar con ella
     this.dataFotosSeteada = Object.values(dataFotos);
     let longitud = this.dataFotosSeteada[this.edificio].length;
-    
+
     //* Enviamos la URL de la fotografía al método que envía al servicio
     for (let index = 0; index < longitud; index++) {
       //* Contiene la información devuelta de Azure
@@ -52,15 +52,15 @@ export class HomeComponent {
       setTimeout(() => {
         // Validamos el porcentaje de coincidencia
         if (prediccion[1] > 0.9800000) {
-          this.armarObjetos(index,prediccion,"Asistencia",this.imgAsistencia);                    
+          this.armarObjetos(index,prediccion,"Asistencia",this.imgAsistencia);
         }else if (prediccion[1] > 0.5000000 && prediccion < 0.9799999) {
           this.armarObjetos(index,prediccion,"Revisar",this.imgRevisar);
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 15000);
+      }, 4000);
     }
-    console.log(this.dataFinal);    
+    console.log(this.dataFinal);
   }
 
   convertirDataFinalAString(){
@@ -74,7 +74,7 @@ export class HomeComponent {
       // Convertimos cada objetos de la dataFinal a string y lo concatenamos a la data String
       this.dataString += JSON.stringify(iterator);
       if (iteracion != this.dataFinal.length) {
-        this.dataString+=",";        
+        this.dataString+=",";
       }
     }
     let dataStringFinal = inicio+this.dataString+final;
@@ -113,7 +113,7 @@ export class HomeComponent {
         coincidencia: String(prediccion[1]),
         asistencia: asistencia,
         imgStatus: img
-      }     
+      }
     }
     this.dataFinal.push(nuevaData)
   }
@@ -129,7 +129,7 @@ export class HomeComponent {
       dataPrediccion.push(this.dataAzure[0])
       dataPrediccion.push(this.dataAzure[4][0].probability)
     });
-    return dataPrediccion;     
+    return dataPrediccion;
   }
 
   //* Recibe el id y se le asigna a elemento a editar para tomarla desde el componente revisar
@@ -145,13 +145,13 @@ export class HomeComponent {
     //! Creamos el archivo JSON con la data Final
     //!  this.crearArchivoJSON();
     let itemsModificar = document.querySelectorAll(".Falta");
-    for (let index = 0; index < itemsModificar.length; index++) { 
-      this.renderer.setStyle(itemsModificar[index], 'background', 'rgb(237,111,111) linear-gradient(90deg, rgba(237,111,111,1) 0%, rgba(224,57,57,1) 100%)');
+    for (let index = 0; index < itemsModificar.length; index++) {
+      this.renderer.setStyle(itemsModificar[index], 'background', '#b33b47');
 
       itemsModificar[index].addEventListener("click", e =>{
         let id = itemsModificar[index].getAttribute("id");
         this.editarElemento(id);
-      });   
+      });
     }
   }
 
@@ -161,7 +161,7 @@ export class HomeComponent {
       this.edificio+=1;
     }else{
       this.edificio-=1;
-    }  
+    }
   }
-  
+
 }

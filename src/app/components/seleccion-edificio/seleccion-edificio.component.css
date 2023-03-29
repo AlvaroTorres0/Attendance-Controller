@@ -39,8 +39,8 @@
     height: 300px;
     width: 380px;
     border-radius: 10px;
-    background: rgb(34,38,129);
-    background: linear-gradient(90deg, rgba(34,38,129,1) 0%, rgba(57,71,224,1) 100%);
+    background: rgb(44,77,86);
+background: linear-gradient(306deg, rgba(44,77,86,1) 0%, rgba(189,50,0,1) 100%);
     box-shadow:
     3.4px 3.4px 4.5px rgba(0, 0, 0, 0.1),
     8.7px 8.7px 9.6px rgba(0, 0, 0, 0.069),
@@ -62,9 +62,9 @@
     transform: scale(1.1);
     /* background: rgb(219,52,221);
     background: linear-gradient(90deg, rgba(219,52,221,1) 0%, rgba(151,55,244,1) 100%); */
-    background: rgb(220,47,229);
-    background: linear-gradient(90deg, rgba(220,47,229,1) 0%, rgba(143,59,243,1) 100%);
-    
+    background: rgb(195,170,114);
+background: linear-gradient(287deg, rgba(195,170,114,1) 0%, rgba(44,77,86,1) 100%);
+
 }
 
 .edificioimg{
