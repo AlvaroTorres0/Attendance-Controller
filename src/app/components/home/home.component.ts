@@ -34,7 +34,7 @@ export class HomeComponent {
     this.crearDataAzure();
     setTimeout(()=>{
       this.agregarEventoModificar();
-    },10000)
+    },11000)
 
   }
 
@@ -51,14 +51,14 @@ export class HomeComponent {
       //* Es para esperar a la data de Azure y que la data final no se arme antes.
       setTimeout(() => {
         // Validamos el porcentaje de coincidencia
-        if (prediccion[1] > 0.9800000) {
+        if (prediccion[1] > 0.9900000) {
           this.armarObjetos(index,prediccion,"Asistencia",this.imgAsistencia);
-        }else if (prediccion[1] > 0.5000000 && prediccion < 0.9799999) {
+        }else if (prediccion[1] > 0.5000000 && prediccion[1] < 0.9899999) {
           this.armarObjetos(index,prediccion,"Revisar",this.imgRevisar);
-        }else{
+        }else if (prediccion[1] === undefined) {
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 9000);
+      }, 10000);
     }
     console.log(this.dataFinal);
   }
@@ -143,15 +143,23 @@ export class HomeComponent {
   //* Agrega un listener a los elementos que tienen la clase falta (cambiar a revisar después) y manda el id a editar elemento
   agregarEventoModificar = () =>{
     //! Creamos el archivo JSON con la data Final
-    //!  this.crearArchivoJSON();
-    let itemsModificar = document.querySelectorAll(".Falta");
+    //! this.crearArchivoJSON();
+    let itemsModificar = document.querySelectorAll(".Revisar");
     for (let index = 0; index < itemsModificar.length; index++) {
-      this.renderer.setStyle(itemsModificar[index], 'background', '#b33b47');
+      this.renderer.setStyle(itemsModificar[index], 'background', '#4e96e2');
 
       itemsModificar[index].addEventListener("click", e =>{
         let id = itemsModificar[index].getAttribute("id");
         this.editarElemento(id);
       });
+    }
+    this.colorearFalta();
+  }
+
+  colorearFalta = () =>{
+    let itemsFalta = document.querySelectorAll(".Falta");
+    for (let index = 0; index < itemsFalta.length; index++) {
+      this.renderer.setStyle(itemsFalta[index], 'background', '#b33b47');
     }
   }
 
