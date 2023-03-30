@@ -1,34 +1,10 @@
 {
   "A": [
-    {
-      "horario": "10:00 - 11:00",
-      "aula": 2,
-      "materia": "Taller de investigación",
-      "docente": "Ángeles Hernández Leonor",
-      "carrera": "Ingeniería en sistemas",
-      "grupo": 1,
-      "fotografia": {
-        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E2(15-03-2023).jpg",
-        "hora": "10:08:00"
-      }
-    },
-    {
-      "horario": "10:00 - 12:00",
-      "aula": 12,
-      "materia": "Tópicos avanzados de programacion",
-      "docente": "Gonzáles Lima Ilmers Michel",
-      "carrera": "Ingeniería en sistemas",
-      "grupo": 3,
-      "fotografia": {
-        "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
-        "hora": "10:08:00"
-      }
-    }
 
   ],
   "E": [
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 2,
       "materia": "Taller de investigación",
       "docente": "Ángeles Hernández Leonor",
@@ -36,11 +12,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E2(15-03-2023).jpg",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 4,
       "materia": "Programación orientada a objetos",
       "docente": "Hernández Cásbis Ruth",
@@ -48,11 +24,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E4(15-03-2023).jpg",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     },
     {
-      "horario": "10:00 - 12:00",
+      "horario": "13:00 - 15:00",
       "aula": 5,
       "materia": "Sensores y actuadores",
       "docente": "Sánchez Santamaría Juan Carlos",
@@ -60,11 +36,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E5(15-03-2023).jpg",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 6,
       "materia": "Administración de redes",
       "docente": "Salvador Vargas Alejandro",
@@ -72,11 +48,11 @@
       "grupo": 3,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E6(15-03-2023).jpg",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     },
     {
-      "horario": "10:00 - 12:00",
+      "horario": "13:00 - 15:00",
       "aula": 8,
       "materia": "Fundamentos de internet de las cosas",
       "docente": "Morales Torres Daniel Alejandro",
@@ -84,11 +60,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E8(15-03-2023).jpg",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     },
     {
-      "horario": "10:00 - 12:00",
+      "horario": "13:00 - 14:00",
       "aula": 12,
       "materia": "Tópicos avanzados de programacion",
       "docente": "Gonzáles Lima Ilmers Michel",
@@ -96,7 +72,7 @@
       "grupo": 3,
       "fotografia": {
         "url": "https://raw.githubusercontent.com/AlvaroTorres0/15-03-2023/main/E12(15-03-2023).png",
-        "hora": "10:08:00"
+        "hora": "13:08:00"
       }
     }
   ],
@@ -117,7 +93,7 @@
   ],
   "K": [
     {
-      "horario": "10:00 - 12:00",
+      "horario": "13:00 - 15:00",
       "aula": 8,
       "materia": "Legislación",
       "docente": "Vázquez Mendoza María del Rosario",
@@ -125,11 +101,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973102/attendance%20controller/IMG_20230324_084331-min_pt5gwj.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 10,
       "materia": "Auditorías internas",
       "docente": "Barceles Morales Selene",
@@ -137,11 +113,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973103/attendance%20controller/IMG_20230324_083541-min_vmz97z.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 11,
       "materia": "Marketing empresarial",
       "docente": "Adame Mercado Joaquín",
@@ -149,11 +125,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973111/attendance%20controller/IMG_20230324_090254-min_ao1jok.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 12,
       "materia": "Capitales operativos",
       "docente": "Vivar Tiempos Rigoberto",
@@ -161,11 +137,11 @@
       "grupo": 3,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973112/attendance%20controller/IMG_20230324_084559_zfu1x8.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     },
     {
-      "horario": "10:00 - 12:00",
+      "horario": "13:00 - 15:00",
       "aula": 13,
       "materia": "Fundamentos de modelos de negocio",
       "docente": "Martinez Torres Liliana",
@@ -173,11 +149,11 @@
       "grupo": 1,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973114/attendance%20controller/IMG_20230324_085154-min_e3yv40.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     },
     {
-      "horario": "10:00 - 11:00",
+      "horario": "13:00 - 14:00",
       "aula": 14,
       "materia": "Capitales operativos",
       "docente": "Elizalde Ruiz Ximena",
@@ -185,7 +161,7 @@
       "grupo": 3,
       "fotografia": {
         "url": "https://res.cloudinary.com/dw1umckxa/image/upload/v1679973116/attendance%20controller/IMG_20230324_083718_pgq5m5.jpg",
-        "hora": "10:10:00"
+        "hora": "13:10:00"
       }
     }
   ]

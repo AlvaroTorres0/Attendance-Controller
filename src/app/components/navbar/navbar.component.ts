@@ -20,6 +20,13 @@ export class NavbarComponent {
     let fechaSistema = new Date();
     let hora = fechaSistema.getHours();
     let minutos = fechaSistema.getMinutes();
-    this.fecha = `${hora}:${minutos}`;
+    let minutosString = "0";
+    if (minutos < 10) {
+      minutosString += String(minutos);   
+      this.fecha = `${hora}:${minutosString}`;  
+    }else{
+      this.fecha = `${hora}:${minutos}`;
+    }
+    
   }
 }

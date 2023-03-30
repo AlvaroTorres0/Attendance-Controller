@@ -34,7 +34,7 @@ export class HomeComponent {
     this.crearDataAzure();
     setTimeout(()=>{
       this.agregarEventoModificar();
-    },5000)
+    },10000)
 
   }
 
@@ -58,7 +58,7 @@ export class HomeComponent {
         }else{
           this.armarObjetos(index,prediccion,"Falta",this.imgFalta);
         }
-      }, 4000);
+      }, 9000);
     }
     console.log(this.dataFinal);
   }
