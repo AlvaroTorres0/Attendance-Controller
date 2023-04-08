@@ -2,6 +2,7 @@ import { Component, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import dataFotos from '../../dataFoto.json';
 import { MscvServiceService } from '../../servicio/mscv-service.service';
+import { MongoServiceService } from '../../servicioBD/mongo-service.service';
 
 @Component({
   selector: 'app-home',
@@ -9,20 +10,21 @@ import { MscvServiceService } from '../../servicio/mscv-service.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private _msService : MscvServiceService, private route: ActivatedRoute, private renderer: Renderer2){}
   public dataFotosSeteada : any = [];
   public dataAzure : any = [];
   public dataFinal : any = [];
   public elementoEditar = 0;
   public edificios = ["A","E","F","G","H","I","J","K"];
   public edificio = Number(this.route.snapshot.paramMap.get('edificio'));
-  public dataString = "";
   public statusContainerEdicion = false;
   public statusContainerPrincipal = true;
   public imgAsistencia = "../../../assets//iconsStatus/accept.png";
   public imgFalta = "../../../assets//iconsStatus/close.png";
   public imgRevisar = "../../../assets//iconsStatus/warning.png";
 
+  
+
+  constructor(private _msService : MscvServiceService, private route: ActivatedRoute, private renderer: Renderer2, private _mongoService : MongoServiceService){}
   ngOnInit(): void {
     this.metodoPrincipal();
 
@@ -50,7 +52,7 @@ export class HomeComponent {
 
       //* Es para esperar a la data de Azure y que la data final no se arme antes.
       setTimeout(() => {
-        // Validamos el porcentaje de coincidencia
+        //! Validamos el porcentaje de coincidencia
         if (prediccion[1] > 0.9900000) {
           this.armarObjetos(index,prediccion,"Asistencia",this.imgAsistencia);
         }else if (prediccion[1] > 0.5000000 && prediccion[1] < 0.9899999) {
@@ -63,35 +65,26 @@ export class HomeComponent {
     console.log(this.dataFinal);
   }
 
-  convertirDataFinalAString(){
-    this.dataString = "";
-    let iteracion = 0;
-    let inicio = '{ "21/03/2023": [';
-    let final = "] }";
+  registrarDatosBD = () =>{
+    let fechaSistema = new Date();
+    let dia = fechaSistema.getDate()
+    let mes = fechaSistema.getMonth();
+    let anio = fechaSistema.getFullYear();
+    let hora = fechaSistema.getHours();
+    let horaJSON = `${hora}:00 - ${hora+1}:00`;
+    let fecha = `${dia}/${mes}/${anio}`;
 
-    for (const iterator of this.dataFinal) {
-      iteracion ++;
-      // Convertimos cada objetos de la dataFinal a string y lo concatenamos a la data String
-      this.dataString += JSON.stringify(iterator);
-      if (iteracion != this.dataFinal.length) {
-        this.dataString+=",";
-      }
+    //? Es la data que se envía al modelo, en data, enviamos directamente todo los elementos de la data Final
+    let data = {
+      "edificio": this.edificios[this.edificio],
+      "hora": horaJSON,
+      "fecha" : fecha,
+      "data" : this.dataFinal
     }
-    let dataStringFinal = inicio+this.dataString+final;
-    return dataStringFinal;
-  }
-
-  crearArchivoJSON = () =>{
-    let dataString = this.convertirDataFinalAString();
-    const blob = new Blob([dataString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'data.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    //? Llamamos el servicio para registrar y le enviamos la data previamente construida
+    this._mongoService.registrarInformacion(data).subscribe((resp: any) => {
+      alert("Registrado");
+    });
   }
 
 
@@ -143,7 +136,7 @@ export class HomeComponent {
   //* Agrega un listener a los elementos que tienen la clase falta (cambiar a revisar después) y manda el id a editar elemento
   agregarEventoModificar = () =>{
     //! Creamos el archivo JSON con la data Final
-    //! this.crearArchivoJSON();
+    this.registrarDatosBD();
     let itemsModificar = document.querySelectorAll(".Revisar");
     for (let index = 0; index < itemsModificar.length; index++) {
       this.renderer.setStyle(itemsModificar[index], 'background', '#4e96e2');
