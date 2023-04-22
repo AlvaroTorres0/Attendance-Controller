@@ -39,6 +39,7 @@
     position: absolute;
     height: 55px;
     width: 55px;
+    z-index: 1;
 }
 .status-block{
     position: absolute;
@@ -50,6 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 }
 
 

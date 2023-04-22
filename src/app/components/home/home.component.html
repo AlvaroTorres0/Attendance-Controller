@@ -16,14 +16,16 @@
 
     <div class="container_classrooms" id="classrooms">
         <div class="card" ngClass="{{item.analisis.asistencia}}" id="{{i}}" *ngFor="let item of dataFinal; let i = index">
+            
             <div class="card-image">
                 <div class="card-image_status">
                     <div class="status-block">
                         <img src="{{item.analisis.imgStatus}}" id="status" alt="">
                     </div>
                 </div>
-                <img src={{item.fotografia.url}} alt="">
+                <img src={{item.fotografia.url}} alt="" class="fotografia">
             </div>
+
             <div class="card-info">
                 <div class="card-info_classroom">
                     <h3 class="">{{item.edificio+item.aula}}</h3>

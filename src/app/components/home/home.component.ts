@@ -18,9 +18,9 @@ export class HomeComponent {
   public edificio = Number(this.route.snapshot.paramMap.get('edificio'));
   public statusContainerEdicion = false;
   public statusContainerPrincipal = true;
-  public imgAsistencia = "../../../assets//iconsStatus/accept.png";
-  public imgFalta = "../../../assets//iconsStatus/close.png";
-  public imgRevisar = "../../../assets//iconsStatus/warning.png";
+  public imgAsistencia = "../../../assets/iconsStatus/accept.png";
+  public imgFalta = "../../../assets/iconsStatus/close.png";
+  public imgRevisar = "../../../assets/iconsStatus/warning.png";
 
   
 
